@@ -1,0 +1,18 @@
+.color {
+    display: inline-block;
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+}
+#color-red {
+    background: red;
+}
+#color-blue {
+    background: blue;
+}
+#color-green {
+    background: green;
+}
+#color-pink {
+    background: pink;
+}
