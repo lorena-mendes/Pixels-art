@@ -4,12 +4,12 @@ let colorPalette = document.getElementById('color-palette');
 for (let i = 0; i < paletaDeCores.length; i += 1) {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);  
   let div = document.createElement('div');
-  div.style.backgroundColor = "#" + randomColor;
   if (i === 0) {
     div.style.backgroundColor = 'black'
+  } else {
+    div.style.backgroundColor = "#" + randomColor;
   }
   div.classList.add('color');
-  // div.classList.add(paletaDeCores[i])
   div.addEventListener('click', addSelected)
   colorPalette.appendChild(div);
 }
