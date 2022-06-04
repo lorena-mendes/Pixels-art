@@ -4,15 +4,32 @@
     width: 70px;
     height: 70px;
 }
-#color-red {
-    background: red;
+.color-black {
+    background-color: black !important;
 }
-#color-blue {
-    background: blue;
+.color-blue {
+    background-color: blue !important;
 }
-#color-green {
-    background: green;
+.color-green {
+    background-color: green !important;
 }
-#color-pink {
-    background: pink;
+.color-pink {
+    background-color: pink !important;
+};
+#color-white {
+    background-color: white;
 }
+.pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+#pixel-board {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+}
+/* #clear-board {
+    display: block;
+    margin: 10px;
+} */
