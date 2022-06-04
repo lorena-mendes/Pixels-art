@@ -58,6 +58,7 @@ body.appendChild(botao);
 
 
 function retornaCorBranca () {
+  todoPixel = document.querySelectorAll('.pixel')
   for (let i = 0; i < todoPixel.length; i += 1) {
     todoPixel[i].removeAttribute('style')
     todoPixel[i].classList.add('pixel')
