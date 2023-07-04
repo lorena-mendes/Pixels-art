@@ -51,10 +51,8 @@ function addQuadro(quantidadeDeQuadros = 25) {
 }
 addQuadro();
 
-const botao = document.createElement('button');
-botao.id = 'clear-board';
-// const primeiraSection = document.querySelector('section');
-botao.innerHTML = 'Limpar';
+// BOTÃO LIMPAR
+const botao = document.getElementById('clear-board');
 let todoPixel = document.querySelectorAll('.pixel');
 const body = document.querySelector('body');
 body.appendChild(botao);
@@ -71,13 +69,11 @@ botao.addEventListener('click', retornaCorBranca);
 let pixel = document.getElementById(PIXEL_BOARD);
 body.insertBefore(botao, pixel);
 
-const input = document.createElement('input');
-input.id = 'board-size';
-input.setAttribute('type', 'number');
-input.setAttribute('min', '1');
-const botaoPixel = document.createElement('button');
-botaoPixel.id = 'generate-board';
-botaoPixel.innerHTML = 'VQV';
+// INPUT QUE MUDA O TAMANHO DOS QUADRADOS
+const input = document.getElementById('board-size');
+
+// BOTÃO VAMO QUE VAMO
+const botaoPixel = document.getElementById('generate-board');
 body.insertBefore(input, pixel);
 body.insertBefore(botaoPixel, pixel);
 
@@ -100,3 +96,17 @@ function maoirQueZero() {
 }
 
 botaoPixel.addEventListener('click', maoirQueZero);
+
+// Selecionar os elementos existentes
+const clearButton = document.getElementById('clear-board');
+const inputContainer = document.getElementById('board-size');
+const generateButton = document.getElementById('generate-board');
+
+// Mover os elementos para dentro da div "controls"
+const controlsDiv = document.getElementById('controls');
+controlsDiv.appendChild(clearButton);
+controlsDiv.appendChild(inputContainer);
+controlsDiv.appendChild(generateButton);
+
+// Mover a div "controls" para antes da div "pixel-board"
+body.insertBefore(controlsDiv, generateButton);
